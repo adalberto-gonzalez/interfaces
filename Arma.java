@@ -8,7 +8,7 @@ public class Arma implements Inventariable{
     }
 
     @Override
-    public void agregar(Inventario inv, int cantidad) {
+    public void registrar(Inventario inv, int cantidad) {
         for (int i = 0; i < cantidad; i++) {
             inv.items.add(this);
         }
@@ -16,7 +16,7 @@ public class Arma implements Inventariable{
     }
 
     @Override
-    public void eliminar(Inventario inv) {
+    public void borrar(Inventario inv) {
         inv.items.remove(this);
         System.out.println("Eliminado del inventario.");
     }
