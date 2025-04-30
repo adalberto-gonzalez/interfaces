@@ -10,14 +10,14 @@ public class Recompensa implements Inventariable {
     @Override
     public void registrar(Inventario inv, int cantidad) {
         for (int i = 0; i < cantidad; i++) {
-            inv.items.add(this);
+            inv.agregarItem(this);
         }
         System.out.println("Recompensa agregada.");
     }
 
     @Override
     public void borrar(Inventario inv) {
-        inv.items.remove(this);
+        inv.borrarItem(this);
         System.out.println("Recompensa eliminada.");
     }
 

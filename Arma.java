@@ -7,17 +7,33 @@ public class Arma implements Inventariable{
         this.ataque = ataque;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getAtaque() {
+        return ataque;
+    }
+
+    public void setAtaque(int ataque) {
+        this.ataque = ataque;
+    }
+
     @Override
     public void registrar(Inventario inv, int cantidad) {
         for (int i = 0; i < cantidad; i++) {
-            inv.items.add(this);
+            inv.agregarItem(this);
         }
         System.out.println("Agregado al inventario.");
     }
 
     @Override
     public void borrar(Inventario inv) {
-        inv.items.remove(this);
+        inv.borrarItem(this);
         System.out.println("Eliminado del inventario.");
     }
 
